@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funngro Company - Cultivating Innovation</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Tailwind Configuration for Neon Theme -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-green': '#39ff14',
+                        'neon-glow': 'rgba(57, 255, 20, 0.4)',
+                        'dark-bg': '#0a0a0a',
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'mono': ['Space Mono', 'monospace'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'neon-flicker': 'flicker 3s infinite alternate',
+                        'slide-in': 'slideIn 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        flicker: {
+                            '0%, 19%, 21%, 23%, 25%, 54%, 56%, 100%': { 'text-shadow': '0 0 4px #39ff14, 0 0 11px #39ff14, 0 0 19px #39ff14, 0 0 20px #228b22, 0 0 30px #228b22, 0 0 40px #228b22, 0 0 50px #228b22, 0 0 75px #228b22' },
+                            '20%, 24%, 55%': { 'text-shadow': 'none' },
+                        },
+                        slideIn: {
+                            '0%': {
+                                opacity: '0',
+                                transform: 'translateY(50px)',
+                            },
+                            '100%': {
+                                opacity: '1',
+                                transform: 'translateY(0)',
+                            },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;600;800&display=swap');
+
+        /* Base styles */
+        body {
+            background-color: #0a0a0a;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Neon Text Effect */
+        .neon-text {
+            color: #fff;
+            text-shadow: 0 0 7px rgba(57, 255, 20, 0.8), 0 0 10px rgba(57, 255, 20, 0.6), 0 0 21px #39ff14;
+        }
+
+        /* Neon Border Effect */
+        .neon-border {
+            border: 2px solid #39ff14;
+            box-shadow: 0 0 5px #39ff14, 0 0 15px #39ff14;
+            transition: all 0.3s ease;
+        }
+
+        .neon-border:hover {
+            box-shadow: 0 0 10px #39ff14, 0 0 30px #39ff14;
+            transform: translateY(-2px);
+        }
+
+        /* Scroll Animation Target */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Glowing Divider */
+        .glowing-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #39ff14, transparent);
+            box-shadow: 0 0 15px #39ff14;
+        }
+    </style>
+</head>
+<body class="font-inter">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-dark-bg/95 backdrop-blur-sm shadow-xl shadow-neon-glow/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="text-3xl font-bold font-mono tracking-widest neon-text animate-neon-flicker">
+                FUNNGRO
+            </div>
+            <nav class="hidden md:flex space-x-8 text-sm font-semibold">
+                <a href="#features" class="text-gray-300 hover:text-neon-green transition duration-300">Features</a>
+                <a href="#analytics" class="text-gray-300 hover:text-neon-green transition duration-300">Analytics</a>
+                <a href="#testimonials" class="text-gray-300 hover:text-neon-green transition duration-300">Testimonials</a>
+                <a href="#contact" class="px-4 py-2 rounded-lg bg-neon-green text-dark-bg neon-border hover:bg-white transition duration-300">Start Project</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section class="min-h-screen flex items-center justify-center text-center p-6 pt-24 md:pt-0">
+            <div class="max-w-4xl animate-slide-in">
+                <h1 class="text-6xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6">
+                    <span class="block text-white">Cultivating Innovation.</span>
+                    <span class="block neon-text animate-pulse-slow">Harvesting Growth.</span>
+                </h1>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-10 font-mono">
+                    Funngro Company powers the future of scale with synergistic platforms and real-time data integration.
+                </p>
+                <a href="#features" class="inline-flex items-center justify-center px-10 py-4 border-2 border-neon-green text-lg font-semibold rounded-xl bg-dark-bg text-neon-green neon-border shadow-2xl shadow-neon-glow/40 transition duration-500 transform hover:scale-105">
+                    Explore Platform
+                </a>
+            </div>
+        </section>
+
+        <div class="glowing-divider max-w-6xl mx-auto my-16"></div>
+
+        <!-- 2. Core Features Grid -->
+        <section id="features" class="py-20 md:py-32">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-5xl font-extrabold text-center mb-16 animate-on-scroll">
+                    The \textbf{Future} of Business Integration
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <!-- Feature 1 -->
+                    <div class="bg-gray-900/40 p-8 rounded-2xl neon-border animate-on-scroll" style="transition-delay: 100ms;">
+                        <svg class="w-12 h-12 text-neon-green mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10m0 0h16m0 0V7M4 17h16m0 0l-5-5-5 5-5-5-5 5"></path></svg>
+                        <h3 class="text-2xl font-bold neon-text mb-3">Synergistic Integration</h3>
+                        <p class="text-gray-400">Our proprietary API bridge allows your legacy systems and modern tools to communicate instantly, reducing latency by 90\%.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="bg-gray-900/40 p-8 rounded-2xl neon-border animate-on-scroll" style="transition-delay: 200ms;">
+                        <svg class="w-12 h-12 text-neon-green mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <h3 class="text-2xl font-bold neon-text mb-3">Real-time Analytics</h3>
+                        <p class="text-gray-400">Access instant, actionable data insights displayed on a sleek, customizable neon dashboard. No more waiting for end-of-day reports.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-gray-900/40 p-8 rounded-2xl neon-border animate-on-scroll" style="transition-delay: 300ms;">
+                        <svg class="w-12 h-12 text-neon-green mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M16 12h1m-1.636 4.364l.707.707M12 20v-1m-6.364-1.636l.707-.707M7 12H6m1.636-4.364l-.707-.707M12 12a4 4 0 100-8 4 4 0 000 8z"></path></svg>
+                        <h3 class="text-2xl font-bold neon-text mb-3">Intuitive UI/UX Design</h3>
+                        <p class="text-gray-400">An experience built for peak efficiency. Our interface is so simple, your team will achieve maximum adoption in minutes, not weeks.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="glowing-divider max-w-6xl mx-auto my-16"></div>
+
+        <!-- 3. Testimonial/Callout Section -->
+        <section id="testimonials" class="py-20 md:py-32 bg-gray-900/20">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
+                <blockquote class="text-3xl italic font-light leading-relaxed text-gray-300 mb-8">
+                    "Funngro didn't just optimize our supply chain; they revolutionized our operational philosophy. The clarity in their analytics is unmatched, and the neon aesthetic? Pure genius."
+                </blockquote>
+                <p class="text-lg font-semibold neon-text">- Dr. A. Lee, CEO of Global Dynamics</p>
+                <div class="mt-12">
+                    <a href="#contact" class="inline-flex items-center justify-center px-8 py-3 text-lg font-semibold rounded-lg bg-neon-green text-dark-bg neon-border hover:bg-white transition duration-300">
+                        Join the Revolution Today
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Footer & Contact -->
+        <footer id="contact" class="py-12 border-t border-neon-green/30 bg-dark-bg/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h3 class="text-3xl font-bold mb-4 neon-text">Ready to Grow?</h3>
+                <p class="text-gray-400 mb-8">Contact us to schedule a free, personalized platform demo.</p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm font-mono">
+                    <p class="text-white hover:text-neon-green transition duration-300">Email: <a href="mailto:contact@funngro.co" class="underline">contact@funngro.co</a></p>
+                    <p class="text-white hover:text-neon-green transition duration-300">Phone: +1 (555) FUN-GRO</p>
+                    <p class="text-gray-500">&copy; 2025 Funngro Company. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- JavaScript for Scroll Animations (Intersection Observer) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target); // Stop observing once visible
+                    }
+                });
+            }, observerOptions);
+
+            elements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
